@@ -23,7 +23,7 @@
 # if y == x:   
 #     print(f'congratulation your guess is{total_guess} time ')
 import random
-# Define the rooms of the dungeon
+
 rooms = {
     'entrance': {
         'description': 'You are at the entrance of the dungeon. There are three doors in front of you.',
@@ -43,13 +43,13 @@ rooms = {
     }
 }
 
-# Define player attributes
+
 player = {
     'current_room': 'entrance',
     'inventory': []
 }
 
-# Define game functions
+
 def display_room():
     print(rooms[player['current_room']]['description'])
 
@@ -68,9 +68,9 @@ def check_room():
         del current_room['treasure']
     elif 'trap' in current_room:
         print(f"You fell into a {current_room['trap']}!")
-        # Implement trap consequences here
+        
 
-# Main game loop
+
 def main():
     print("Welcome to the Dungeon!")
     display_room()
